@@ -1,0 +1,25 @@
+{
+	"name": "selectedtriger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "copyonly select files getmetadata",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 5,
+				"startTime": "2025-06-10T13:22:00",
+				"endTime": "2025-06-11T13:45:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}

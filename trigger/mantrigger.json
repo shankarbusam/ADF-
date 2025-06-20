@@ -1,0 +1,24 @@
+{
+	"name": "mantrigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "CopyData to ADLS to ADLS",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/source/blobs/csvfiles",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/81fd0ee2-5520-4750-89ab-7f6cc8ed13df/resourceGroups/Sh_RG/providers/Microsoft.Storage/storageAccounts/shdatalake1234",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

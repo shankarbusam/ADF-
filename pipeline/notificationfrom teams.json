@@ -1,0 +1,40 @@
+{
+	"name": "notificationfrom teams",
+	"properties": {
+		"activities": [
+			{
+				"name": "SendTeamsNotification",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "POST",
+					"headers": {
+						"Content-Type": {
+							"value": "application/json",
+							"type": "Expression"
+						}
+					},
+					"url": {
+						"value": "https://soothsayeranalytics.webhook.office.com/webhookb2/219dec0b-b295-49db-8234-de421ad3e1b0@5e3869d3-2dc1-470b-b5a7-6d44d4be01e5/IncomingWebhook/96d37f3e900e4e5cb9e605742eadf024/b612b0e1-17eb-4fd8-a8df-fd94942d9bd8/V2G9zaflzB2tl-2nhqhjWbmHZqlfkDYsJk7Nf_0wWnj-c1",
+						"type": "Expression"
+					},
+					"body": {
+						"value": "@string('{\n  \"@type\": \"MessageCard\",\n  \"@context\": \"http://schema.org/extensions\",\n  \"themeColor\": \"0076D7\",\n  \"summary\": \"ADF Pipeline Notification\",\n  \"title\": \"ADF Pipeline Execution Result\",\n  \"sections\": [\n    {\n      \"activityTitle\": \"Data Factory Alert\",\n      \"text\": \"Pipeline **@{pipeline().Pipeline}** in **@{pipeline().DataFactory}** has completed.\",\n      \"facts\": [\n        {\n          \"name\": \"Run ID\",\n          \"value\": \"@{pipeline().RunId}\"\n        }\n      ]\n    }\n  ]\n}')\n",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2025-06-12T15:55:13Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

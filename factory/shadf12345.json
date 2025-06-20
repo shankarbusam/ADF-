@@ -1,0 +1,17 @@
+{
+	"name": "shadf12345",
+	"properties": {
+		"globalParameters": {
+			"global": {
+				"type": "string",
+				"value": "test"
+			}
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "75192735-ee41-4600-b964-f4f28217cf63",
+		"tenantId": "3db45a94-0213-4d70-b6b4-cc9cad769913"
+	}
+}
