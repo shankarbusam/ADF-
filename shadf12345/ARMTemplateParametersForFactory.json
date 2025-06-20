@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "shadf12345"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"LinkedServiceDataSource_accountKey": {
+			"value": ""
+		},
+		"SqlServer2_password": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://shankar1234.dfs.core.windows.net/"
+		},
+		"HttpServer1_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com"
+		},
+		"LinkedServiceDataSource_properties_typeProperties_url": {
+			"value": "https://shdatalake1234.dfs.core.windows.net/"
+		},
+		"SqlServer2_properties_typeProperties_server": {
+			"value": "localhost"
+		},
+		"SqlServer2_properties_typeProperties_database": {
+			"value": "MyTestDB1"
+		},
+		"SqlServer2_properties_typeProperties_userName": {
+			"value": "myuser "
+		},
+		"mantrigger_properties_typeProperties_scope": {
+			"value": "/subscriptions/81fd0ee2-5520-4750-89ab-7f6cc8ed13df/resourceGroups/Sh_RG/providers/Microsoft.Storage/storageAccounts/shdatalake1234"
+		},
+		"storagetrigger_properties_typeProperties_scope": {
+			"value": "/subscriptions/81fd0ee2-5520-4750-89ab-7f6cc8ed13df/resourceGroups/Sh_RG/providers/Microsoft.Storage/storageAccounts/shdatalake1234"
+		}
+	}
+}
